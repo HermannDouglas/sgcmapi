@@ -2,14 +2,37 @@ package br.ufac.sgcmapi.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Profissional implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, updatable = false)
     private Long id;
+
+    @Column(nullable = false)
     private String nome;
+    
+    @Column(nullable = false)
     private String registroConselho;
+    
+    @Column(nullable = false)
     private String telefone;
+    
+    @Column(nullable = false)
     private String email;
+    
+    @ManyToOne(optional = false)
     private Especialidade especialidade;
+    
+    @ManyToOne(optional = false)
     private Unidade unidade;
 
     public Long getId() {
