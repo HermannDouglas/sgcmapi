@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "553a2f56-2727-452b-9ccf-8fd8800374e9",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/{id}",
+    "url": "http://localhost:9000/atendimento/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-09-24T14:32:43.332Z",
+    "modified": "2022-09-28T22:56:49.466Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "bc0b1da9-b163-4cd0-a4c2-190297dcbc58",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/",
+    "url": "http://localhost:9000/atendimento/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-24T14:32:43.332Z",
+    "modified": "2022-09-28T22:55:31.987Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a37428d0-c21a-4a9d-bad6-7ecd7c044e40",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/{id}",
+    "url": "http://localhost:9000/atendimento/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-24T14:32:43.332Z",
+    "modified": "2022-09-25T00:59:11.087Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6047bbec-06e1-41d0-88b6-ea98169ba589",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/",
+    "url": "http://localhost:9000/atendimento/",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-09-24T14:48:21.195Z",
+    "modified": "2022-09-25T00:58:22.308Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"id\": 20,\n  \"data\": \"2022-10-01\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0e6c9146-34c0-44a5-95db-7093860a4709",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/",
+    "url": "http://localhost:9000/atendimento/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-24T14:48:21.195Z",
+    "modified": "2022-09-24T21:34:46.992Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"data\": \"2022-10-01\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
