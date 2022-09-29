@@ -18,7 +18,7 @@ import br.ufac.sgcmapi.model.Atendimento;
 import br.ufac.sgcmapi.service.AtendimentoService;
 
 @RestController
-@RequestMapping("/Atendimento")
+@RequestMapping("/atendimento")
 public class AtendimentoController implements ICrudController<Atendimento> {
 
     private final AtendimentoService servico;
@@ -27,7 +27,6 @@ public class AtendimentoController implements ICrudController<Atendimento> {
     public AtendimentoController(AtendimentoService servico){
         this.servico = servico;
     }
-
 
     @Override
     @GetMapping("/")

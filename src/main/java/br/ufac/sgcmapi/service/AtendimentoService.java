@@ -18,7 +18,7 @@ public class AtendimentoService implements ICrudService<Atendimento> {
     public AtendimentoService(AtendimentoRepository repo) {
         this.repo = repo;
     }
-   
+
     @Override
     public List<Atendimento> getAll() {
         return repo.findAll();
@@ -31,16 +31,14 @@ public class AtendimentoService implements ICrudService<Atendimento> {
 
     @Override
     public Atendimento save(Atendimento objeto) {
-       return repo.save(objeto);
+        return repo.save(objeto);
     }
 
     @Override
     public void delete(Long id) {
         Atendimento registro = repo.findById(id).orElse(null);
         registro.setStatus(EStatus.CANCELADO);
-        repo.save(registro);        
+        repo.save(registro);
     }
-
-    
     
 }
