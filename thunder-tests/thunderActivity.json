@@ -18,11 +18,11 @@
     "colId": "history",
     "containerId": "",
     "name": "/atendimento/",
-    "url": "http://localhost:9000/atendimento/",
+    "url": "https://localhost:9000/atendimento/",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-30T21:05:42.994Z",
+    "modified": "2022-09-30T22:14:58.231Z",
     "headers": [],
     "params": [],
     "tests": []
