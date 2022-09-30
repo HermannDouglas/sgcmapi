@@ -8,7 +8,7 @@
     "method": "DELETE",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-29T23:07:24.245Z",
+    "modified": "2022-09-30T21:05:52.963Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,7 +22,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-30T20:48:19.052Z",
+    "modified": "2022-09-30T21:05:42.994Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -36,7 +36,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-30T20:48:13.761Z",
+    "modified": "2022-09-30T21:05:45.579Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -50,7 +50,7 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-09-24T14:48:21.195Z",
-    "modified": "2022-09-30T20:48:21.459Z",
+    "modified": "2022-09-30T21:05:40.071Z",
     "headers": [],
     "params": [],
     "body": {
@@ -69,7 +69,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-09-24T14:48:21.195Z",
-    "modified": "2022-09-29T23:43:05.467Z",
+    "modified": "2022-09-30T21:05:48.039Z",
     "headers": [],
     "params": [],
     "body": {
@@ -88,7 +88,35 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-09-30T00:13:29.411Z",
-    "modified": "2022-09-30T00:13:29.566Z",
+    "modified": "2022-09-30T21:05:50.598Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ebfb58b4-c75b-412a-9434-b62177a1cca9",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:9000/atendimento/busca/giulia",
+    "url": "http://localhost:9000/atendimento/busca/giulia",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-30T21:04:51.808Z",
+    "modified": "2022-09-30T21:04:52.150Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "f446e591-7191-43dd-9786-c5afd6dde120",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:9000/atendimento/busca/encerrado",
+    "url": "http://localhost:9000/atendimento/busca/encerrado",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-30T21:05:29.077Z",
+    "modified": "2022-09-30T21:05:31.299Z",
     "headers": [],
     "params": [],
     "tests": []

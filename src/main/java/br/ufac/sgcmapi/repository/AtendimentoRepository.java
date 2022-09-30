@@ -17,7 +17,8 @@ public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> 
         " WHERE p.nome LIKE %?1%" +
         " OR pa.nome LIKE %?1%" +
         " OR c.nome LIKE %?1%" +
-        " OR u.nome LIKE %?1%")
+        " OR u.nome LIKE %?1%" + 
+        " OR a.status LIKE %?1%")
     List<Atendimento> findByAll(String termoBusca);
     
 }
