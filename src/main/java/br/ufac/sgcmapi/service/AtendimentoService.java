@@ -15,7 +15,8 @@ public class AtendimentoService implements ICrudService<Atendimento> {
     private final AtendimentoRepository repo;
 
     @Autowired
-    public AtendimentoService(AtendimentoRepository repo) {
+    public AtendimentoService(
+            AtendimentoRepository repo) {
         this.repo = repo;
     }
 

@@ -14,46 +14,53 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.ufac.sgcmapi.model.Atendimento;
-import br.ufac.sgcmapi.service.AtendimentoService;
+import br.ufac.sgcmapi.model.Usuario;
+import br.ufac.sgcmapi.service.UsuarioService;
+
 
 @RestController
-@RequestMapping("/atendimento")
-public class AtendimentoController implements ICrudController<Atendimento> {
+@RequestMapping("/config/usuario")
+public class UsuarioController implements ICrudController<Usuario> {
 
-    private final AtendimentoService servico;
+    private final UsuarioService servico;
 
     @Autowired
-    public AtendimentoController(
-            AtendimentoService servico) {
+    public UsuarioController(UsuarioService servico) {
         this.servico = servico;
     }
 
     @Override
     @GetMapping("/")
-    public ResponseEntity<List<Atendimento>> getAll() {
-        List<Atendimento> registros = servico.getAll();
+    public ResponseEntity<List<Usuario>> getAll() {
+        List<Usuario> registros = servico.getAll();
         return new ResponseEntity<>(registros, HttpStatus.OK);
     }
 
     @Override
     @GetMapping("/{id}")
-    public ResponseEntity<Atendimento> getById(@PathVariable("id") Long id) {
-        Atendimento registro = servico.getById(id);
+    public ResponseEntity<Usuario> getById(@PathVariable("id") Long id) {
+        Usuario registro = servico.getById(id);
         return new ResponseEntity<>(registro, HttpStatus.OK);
     }
 
     @Override
+    @GetMapping("/busca/{termoBusca}")
+    public ResponseEntity<List<Usuario>> getByAll(@PathVariable("termoBusca") String termoBusca) {
+        List<Usuario> registros = servico.getByAll(termoBusca);
+        return new ResponseEntity<>(registros, HttpStatus.OK);
+    }
+
+    @Override
     @PostMapping("/")
-    public ResponseEntity<Atendimento> insert(@RequestBody Atendimento objeto) {
-        Atendimento registro = servico.save(objeto);
+    public ResponseEntity<Usuario> insert(@RequestBody Usuario objeto) {
+        Usuario registro = servico.save(objeto);
         return new ResponseEntity<>(registro, HttpStatus.CREATED);
     }
 
     @Override
     @PutMapping("/")
-    public ResponseEntity<Atendimento> update(@RequestBody Atendimento objeto) {
-        Atendimento registro = servico.save(objeto);
+    public ResponseEntity<Usuario> update(@RequestBody Usuario objeto) {
+        Usuario registro = servico.save(objeto);
         return new ResponseEntity<>(registro, HttpStatus.OK);
     }
 
@@ -62,19 +69,6 @@ public class AtendimentoController implements ICrudController<Atendimento> {
     public ResponseEntity<?> delete(@PathVariable("id") Long id) {
         servico.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-    @PutMapping("/status/{id}")
-    public ResponseEntity<Atendimento> updateStatus(@PathVariable("id") Long id) {
-        Atendimento registro = servico.updateStatus(id);
-        return new ResponseEntity<>(registro, HttpStatus.OK);
-    }
-
-    @Override
-    @GetMapping("/busca/{termoBusca}")
-    public ResponseEntity<List<Atendimento>> getByAll(@PathVariable("termoBusca") String termoBusca) {
-        List<Atendimento> registros = servico.getByAll(termoBusca);
-        return new ResponseEntity<>(registros, HttpStatus.OK);
     }
     
 }

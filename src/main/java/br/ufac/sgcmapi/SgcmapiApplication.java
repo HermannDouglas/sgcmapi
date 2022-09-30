@@ -12,8 +12,8 @@ public class SgcmapiApplication {
 
 	@RequestMapping("/")
 	@ResponseBody
-	public String exemplo(){
-		return "Spring boot!";
+	public String exemplo() {
+		return "Spring Boot!";
 	}
 
 	public static void main(String[] args) {

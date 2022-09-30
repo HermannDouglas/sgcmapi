@@ -19,19 +19,19 @@ public class Profissional implements Serializable {
 
     @Column(nullable = false)
     private String nome;
-    
+
     @Column(nullable = false)
     private String registroConselho;
-    
+
     @Column(nullable = false)
     private String telefone;
-    
+
     @Column(nullable = false)
     private String email;
-    
+
     @ManyToOne(optional = false)
     private Especialidade especialidade;
-    
+
     @ManyToOne(optional = false)
     private Unidade unidade;
 

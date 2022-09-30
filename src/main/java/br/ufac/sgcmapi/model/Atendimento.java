@@ -26,7 +26,7 @@ import javax.persistence.UniqueConstraint;
     }
 )
 public class Atendimento implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
@@ -106,4 +106,5 @@ public class Atendimento implements Serializable {
     public void setStatus(EStatus status) {
         this.status = status;
     }
+    
 }

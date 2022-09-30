@@ -12,20 +12,21 @@ import br.ufac.sgcmapi.repository.AtendimentoRepository;
 
 @Controller
 public class ExemploController {
-    
+
     private final AtendimentoRepository repo;
 
     @Autowired
-    public ExemploController(AtendimentoRepository repo){
+    public ExemploController(
+            AtendimentoRepository repo) {
         this.repo = repo;
     }
 
     @RequestMapping("/exemplo")
     @ResponseBody
-    public String exemplo(){
+    public String exemplo() {
         List<Atendimento> atendimentos = repo.findAll();
         StringBuilder resultado = new StringBuilder();
-        for (Atendimento item : atendimentos) {
+        for (Atendimento item: atendimentos) {
             resultado.append(item.getId() + "\n");
             resultado.append(item.getData() + "\n");
             resultado.append(item.getHora() + "\n");
@@ -36,6 +37,7 @@ public class ExemploController {
             resultado.append("\n");
         }
         return "<pre>" + resultado.toString() + "</pre>";
+        
     }
-
+    
 }

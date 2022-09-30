@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Convenio implements Serializable{
+public class Convenio implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

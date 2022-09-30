@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button id="get">GET</button>
+        <pre></pre>
+        <script>
+
+            function get() {
+                fetch("http://localhost:9000/atendimento/")
+                    .then(resposta => resposta.json())
+                    .then(dados => {
+                        let elemento = document.querySelector("pre");
+                        elemento.innerText = JSON.stringify(dados, undefined, 2);
+                    });
+            };
+
+            document.querySelector("button#get").addEventListener("click", get);
+
+        </script>
+    </body>
+</html>
