@@ -8,7 +8,7 @@
     "method": "DELETE",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-29T15:55:09.588Z",
+    "modified": "2022-09-29T23:07:24.245Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,7 +22,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-29T15:54:49.559Z",
+    "modified": "2022-09-29T23:08:57.403Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -36,7 +36,7 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-29T15:52:21.591Z",
+    "modified": "2022-09-29T23:40:28.505Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -50,7 +50,7 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-09-24T14:48:21.195Z",
-    "modified": "2022-09-29T15:55:01.750Z",
+    "modified": "2022-09-29T23:07:28.243Z",
     "headers": [],
     "params": [],
     "body": {
@@ -69,7 +69,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-09-24T14:48:21.195Z",
-    "modified": "2022-09-24T21:34:46.992Z",
+    "modified": "2022-09-29T23:43:05.467Z",
     "headers": [],
     "params": [],
     "body": {
@@ -77,6 +77,20 @@
       "raw": "{\n  \"data\": \"2022-10-01\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "e476cfbf-14f2-414d-a6e7-32aa625dc9a4",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/status/1",
+    "url": "http://localhost:9000/atendimento/status/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-09-30T00:13:29.411Z",
+    "modified": "2022-09-30T00:13:29.566Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]
