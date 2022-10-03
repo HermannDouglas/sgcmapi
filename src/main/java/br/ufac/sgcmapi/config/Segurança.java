@@ -39,8 +39,10 @@ public class Segurança {
         http.httpBasic();
         http.cors();
         http.authenticationProvider(authProvider());
+
         http.authorizeHttpRequests().antMatchers("/config/**").hasRole("Admin");
         http.authorizeHttpRequests().anyRequest().authenticated();
+        
         http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
         http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.OK));
         return http.build();
