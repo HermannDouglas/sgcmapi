@@ -52,7 +52,5 @@ public class PerfilUsuario implements UserDetails {
     public boolean isEnabled() {
         return usuario.isAtivo();
     }
-
-
     
 }
