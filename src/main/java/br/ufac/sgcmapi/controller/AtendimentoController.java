@@ -1,5 +1,6 @@
 package br.ufac.sgcmapi.controller;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.ufac.sgcmapi.model.Atendimento;
+import br.ufac.sgcmapi.model.EStatus;
 import br.ufac.sgcmapi.service.AtendimentoService;
 
 @RestController
@@ -74,6 +76,18 @@ public class AtendimentoController implements ICrudController<Atendimento> {
     @GetMapping("/busca/{termoBusca}")
     public ResponseEntity<List<Atendimento>> getByAll(@PathVariable("termoBusca") String termoBusca) {
         List<Atendimento> registros = servico.getByAll(termoBusca);
+        return new ResponseEntity<>(registros, HttpStatus.OK);
+    }
+
+    @GetMapping("/horarios/profissional/{profissional_id}/data/{data}")
+    public ResponseEntity<List<String>> getHorarios(@PathVariable("profissional_id") Long profissional_id, @PathVariable("data") Date data) {
+        List<String> registros = servico.getHorarios(profissional_id, data);
+        return new ResponseEntity<>(registros, HttpStatus.OK);
+    }
+
+    @GetMapping("/busca/status/{status}")
+    public ResponseEntity<List<Atendimento>> getByStatus(@PathVariable("status") List<EStatus> status) {
+        List<Atendimento> registros = servico.getByStatus(status);
         return new ResponseEntity<>(registros, HttpStatus.OK);
     }
     

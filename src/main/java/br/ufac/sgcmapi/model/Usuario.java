@@ -29,10 +29,10 @@ public class Usuario implements Serializable {
     private String nomeUsuario;
 
     @Column(nullable = false)
+    @JsonProperty(access = Access.WRITE_ONLY)
     private String senha;
 
     @Column(nullable = false)
-    @JsonProperty(access = Access.WRITE_ONLY)
     private boolean ativo = true;
     
     @Column(nullable = false)
@@ -70,7 +70,7 @@ public class Usuario implements Serializable {
     // public void setSenha(String senha) {
     //     this.senha = senha;
     // }
-    
+
     public void setSenha(String senha) {
         setSenha(senha, true);
     }

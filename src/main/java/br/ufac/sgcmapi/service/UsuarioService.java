@@ -1,13 +1,9 @@
 package br.ufac.sgcmapi.service;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.ufac.sgcmapi.model.EPapel;
 import br.ufac.sgcmapi.model.Usuario;
 import br.ufac.sgcmapi.repository.UsuarioRepository;
 
@@ -19,12 +15,6 @@ public class UsuarioService implements ICrudService<Usuario> {
     @Autowired
     public UsuarioService(UsuarioRepository repo) {
         this.repo = repo;
-    }
-
-    public List<String> getPapeis() {
-        return Stream.of(EPapel.values())
-            .map(item -> item.name())
-            .collect(Collectors.toList());
     }
 
     @Override
