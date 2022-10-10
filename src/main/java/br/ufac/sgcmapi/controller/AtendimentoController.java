@@ -90,5 +90,11 @@ public class AtendimentoController implements ICrudController<Atendimento> {
         List<Atendimento> registros = servico.getByStatus(status);
         return new ResponseEntity<>(registros, HttpStatus.OK);
     }
+
+    @GetMapping("/busca/{termoBusca}/status/{status}")
+    public ResponseEntity<List<Atendimento>> getByAllAndStatus(@PathVariable("termoBusca") String termoBusca, @PathVariable("status") List<EStatus> status) {
+        List<Atendimento> registros = servico.getByAllAndStatus(termoBusca, status);
+        return new ResponseEntity<>(registros, HttpStatus.OK);
+    }
     
 }

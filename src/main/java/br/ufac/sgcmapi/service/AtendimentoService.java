@@ -73,5 +73,10 @@ public class AtendimentoService implements ICrudService<Atendimento> {
         List<Atendimento> registros = repo.findByStatusIn(status);
         return registros;
     }
+
+    public List<Atendimento> getByAllAndStatus(String termoBusca, List<EStatus> status) {
+        List<Atendimento> registros = repo.findByAllAndStatus(termoBusca, status);
+        return registros;
+    }
     
 }

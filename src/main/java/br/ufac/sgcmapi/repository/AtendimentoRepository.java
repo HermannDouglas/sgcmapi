@@ -27,5 +27,17 @@ public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> 
     List<Atendimento> findByProfissionalAndData(Profissional profissional, Date data);
 
     List<Atendimento> findByStatusIn(List<EStatus> status);
+
+    @Query("SELECT a FROM Atendimento a" +
+        " LEFT JOIN Profissional p ON p.id = a.profissional" +
+        " LEFT JOIN Paciente pa ON pa.id = a.paciente" +
+        " LEFT JOIN Convenio c ON c.id = a.convenio" +
+        " LEFT JOIN Unidade u ON u.id = p.unidade" +
+        " WHERE (p.nome LIKE %?1%" +
+        " OR pa.nome LIKE %?1%" +
+        " OR c.nome LIKE %?1%" +
+        " OR u.nome LIKE %?1%)" +
+        " AND a.status IN ?2")
+    List<Atendimento> findByAllAndStatus(String termoBusca, List<EStatus> status);
     
 }
