@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "/atendimento/{id}",
-    "url": "https://localhost:9000/atendimento/1",
+    "url": "http://localhost:9000/atendimento/1",
     "method": "DELETE",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-10-03T19:12:54.561Z",
+    "modified": "2022-09-28T22:56:46.680Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,9 +22,16 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-10-03T22:24:41.247Z",
+    "modified": "2022-10-06T20:27:57.875Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
     "tests": []
   },
   {
@@ -32,13 +39,20 @@
     "colId": "history",
     "containerId": "",
     "name": "/atendimento/{id}",
-    "url": "http://localhost:9000/atendimento/1",
+    "url": "https://localhost:9000/atendimento/1",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-24T14:32:43.332Z",
-    "modified": "2022-09-30T21:05:45.579Z",
+    "modified": "2022-10-06T20:15:41.264Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "daniel",
+        "password": "daniel"
+      }
+    },
     "tests": []
   },
   {
@@ -50,7 +64,7 @@
     "method": "PUT",
     "sortNum": 0,
     "created": "2022-09-24T14:48:21.195Z",
-    "modified": "2022-10-04T21:16:59.470Z",
+    "modified": "2022-10-04T22:54:42.326Z",
     "headers": [],
     "params": [],
     "body": {
@@ -76,82 +90,26 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-09-24T14:48:21.195Z",
-    "modified": "2022-09-30T21:05:48.039Z",
+    "modified": "2022-09-29T23:36:59.464Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"data\": \"2022-10-01\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
+      "raw": "{\n  \"data\": \"2022-10-01T05:00:00\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
       "form": []
     },
     "tests": []
   },
   {
-    "_id": "e476cfbf-14f2-414d-a6e7-32aa625dc9a4",
+    "_id": "4a3f998c-a2ce-4865-889b-3c85b640dbb9",
     "colId": "history",
     "containerId": "",
-    "name": "/atendimento/status/1",
-    "url": "https://localhost:9000/atendimento/status/1",
+    "name": "/atendimento/status/{id}",
+    "url": "https://localhost:9000/atendimento/status/2",
     "method": "PUT",
     "sortNum": 0,
-    "created": "2022-09-30T00:13:29.411Z",
-    "modified": "2022-10-03T19:20:54.377Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "ebfb58b4-c75b-412a-9434-b62177a1cca9",
-    "colId": "history",
-    "containerId": "",
-    "name": "http://localhost:9000/atendimento/busca/giulia",
-    "url": "http://localhost:9000/atendimento/busca/giulia",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-09-30T21:04:51.808Z",
-    "modified": "2022-09-30T21:04:52.150Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "f446e591-7191-43dd-9786-c5afd6dde120",
-    "colId": "history",
-    "containerId": "",
-    "name": "/atendimento/busca/encerrado",
-    "url": "https://localhost:9000/atendimento/busca/encerrado",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-09-30T21:05:29.077Z",
-    "modified": "2022-10-03T19:21:01.277Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "9221e8c6-457e-4857-89ba-cd223c114494",
-    "colId": "history",
-    "containerId": "",
-    "name": "/logout",
-    "url": "https://localhost:9000/logout",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-10-03T22:23:14.703Z",
-    "modified": "2022-10-03T22:29:13.208Z",
-    "headers": [],
-    "params": [],
-    "tests": []
-  },
-  {
-    "_id": "c5d9fbde-9c27-4846-8725-a4df68655f48",
-    "colId": "history",
-    "containerId": "",
-    "name": "/config/usuario/",
-    "url": "https://localhost:9000/config/usuario/",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2022-10-03T22:26:38.854Z",
-    "modified": "2022-10-03T22:29:45.161Z",
+    "created": "2022-09-30T00:13:26.302Z",
+    "modified": "2022-10-04T22:55:35.835Z",
     "headers": [],
     "params": [],
     "auth": {
@@ -164,15 +122,190 @@
     "tests": []
   },
   {
-    "_id": "85e0793e-54d8-4972-ad40-7b6068ff0fa4",
+    "_id": "8a252f52-2904-4bbc-a4cc-072b12a54964",
     "colId": "history",
     "containerId": "",
-    "name": "https://localhost:9000/config/usuario",
-    "url": "https://localhost:9000/config/usuario",
+    "name": "/atendimento/busca/giulia",
+    "url": "http://localhost:9000/atendimento/busca/encerrado",
     "method": "GET",
     "sortNum": 0,
-    "created": "2022-10-03T22:29:39.994Z",
-    "modified": "2022-10-03T22:29:40.171Z",
+    "created": "2022-09-30T01:07:05.824Z",
+    "modified": "2022-09-30T21:05:01.189Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "871fcae2-cc8f-42b0-bc9d-edcb699a5a02",
+    "colId": "history",
+    "containerId": "",
+    "name": "/logout",
+    "url": "https://localhost:9000/logout",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-03T22:24:22.204Z",
+    "modified": "2022-10-03T22:28:21.589Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "7ba465fd-263f-40f8-a422-1ebf084609f1",
+    "colId": "history",
+    "containerId": "",
+    "name": "/config/usuario/",
+    "url": "https://localhost:9000/config/usuario/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-03T22:26:37.386Z",
+    "modified": "2022-10-06T20:15:49.807Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "636a32ea-5f3b-436e-b5ab-4b31a13dea2c",
+    "colId": "history",
+    "containerId": "",
+    "name": "/convenio/",
+    "url": "https://localhost:9000/convenio/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:16:51.736Z",
+    "modified": "2022-10-06T20:16:51.823Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "51458562-0236-44a3-82ce-62c997249e6d",
+    "colId": "history",
+    "containerId": "",
+    "name": "/profissional/",
+    "url": "https://localhost:9000/profissional/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:17:20.162Z",
+    "modified": "2022-10-06T20:17:20.303Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "d76a520e-bc69-45b1-9280-3d4f9b898419",
+    "colId": "history",
+    "containerId": "",
+    "name": "/paciente/",
+    "url": "https://localhost:9000/paciente/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:17:38.556Z",
+    "modified": "2022-10-06T20:17:38.798Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "227c5bec-0d85-4c0f-9bb4-2fc97a450420",
+    "colId": "history",
+    "containerId": "",
+    "name": "/config/especialidade/",
+    "url": "https://localhost:9000/config/especialidade/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:18:09.226Z",
+    "modified": "2022-10-06T20:52:51.425Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "acca5809-ce57-4b82-b4e7-e40132c484db",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/horarios/profissional/{profissional_id}/data/{data}",
+    "url": "https://localhost:9000/atendimento/horarios/profissional/9/data/2021-08-06",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:18:26.327Z",
+    "modified": "2022-10-06T20:53:44.005Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "94cf5c0d-8db2-4a63-852e-839d9ff4e4e2",
+    "colId": "history",
+    "containerId": "",
+    "name": "/config/unidade/",
+    "url": "https://localhost:9000/config/unidade/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:18:26.327Z",
+    "modified": "2022-10-06T20:18:26.404Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "admin",
+        "password": "admin"
+      }
+    },
+    "tests": []
+  },
+  {
+    "_id": "784cdeef-b789-4921-806a-2713e2c0d8d9",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/busca/status/{status}",
+    "url": "https://localhost:9000/atendimento/busca/status/CANCELADO,CONFIRMADO,ATENDIMENTO",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T20:50:29.794Z",
+    "modified": "2022-10-06T20:50:30.502Z",
     "headers": [],
     "params": [],
     "auth": {
