@@ -1,8 +1,9 @@
 package br.ufac.sgcmapi.service;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,7 +60,7 @@ public class AtendimentoService implements ICrudService<Atendimento> {
         return repo.findByAll(termoBusca);
     }
 
-    public List<String> getHorarios(Long profissional_id, Date data) {
+    public List<String> getHorarios(Long profissional_id, LocalDate data) {
         Profissional profissional = servicoProfissional.getById(profissional_id);
         List<Atendimento> atendimentos = repo.findByProfissionalAndData(profissional, data);
         List<String> horarios = new ArrayList<>();     

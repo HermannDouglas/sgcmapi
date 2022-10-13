@@ -1,6 +1,6 @@
 package br.ufac.sgcmapi.repository;
 
-import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,7 +24,7 @@ public interface AtendimentoRepository extends JpaRepository<Atendimento, Long> 
         " OR a.status LIKE %?1%")
     List<Atendimento> findByAll(String termoBusca);
 
-    List<Atendimento> findByProfissionalAndData(Profissional profissional, Date data);
+    List<Atendimento> findByProfissionalAndData(Profissional profissional, LocalDate data);
 
     List<Atendimento> findByStatusIn(List<EStatus> status);
 

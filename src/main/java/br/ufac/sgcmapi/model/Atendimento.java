@@ -1,8 +1,8 @@
 package br.ufac.sgcmapi.model;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,10 +33,10 @@ public class Atendimento implements Serializable {
     private Long id;
 
     @Column(nullable = false)
-    private Date data;
+    private LocalDate data;
 
     @Column(nullable = false)
-    private Time hora;
+    private LocalTime hora;
 
     @ManyToOne(optional = false)
     private Profissional profissional;
@@ -59,19 +59,19 @@ public class Atendimento implements Serializable {
         this.id = id;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 
-    public Time getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(Time hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 

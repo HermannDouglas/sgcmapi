@@ -1,7 +1,7 @@
 package br.ufac.sgcmapi.model;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +28,7 @@ public class Paciente implements Serializable {
     private String telefone;
 
     @Column(nullable = false)
-    private Date dataNascimento;
+    private LocalDate dataNascimento;
 
     @Enumerated(EnumType.STRING)
     private EGrupoSanguineo grupoSanguineo;
@@ -69,10 +69,10 @@ public class Paciente implements Serializable {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-    public Date getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
     public EGrupoSanguineo getGrupoSanguineo() {
