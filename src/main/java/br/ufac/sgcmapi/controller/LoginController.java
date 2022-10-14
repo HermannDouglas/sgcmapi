@@ -2,6 +2,7 @@ package br.ufac.sgcmapi.controller;
 
 import java.security.Principal;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,8 +18,11 @@ import br.ufac.sgcmapi.service.UsuarioService;
 public class LoginController {
 
     private final UsuarioService servico;
-    
-    public LoginController(UsuarioService servico) {
+
+    @Autowired
+    public LoginController(
+        UsuarioService servico
+    ) {
         this.servico = servico;
     }
 
@@ -26,7 +30,7 @@ public class LoginController {
     public ResponseEntity<Usuario> getUsuario() {
         Principal principal = SecurityContextHolder.getContext().getAuthentication();
         Usuario usuario = servico.getByNomeUsuario(principal.getName());
-        return new ResponseEntity<>(usuario, HttpStatus.OK);        
+        return new ResponseEntity<>(usuario, HttpStatus.OK);
     }
     
 }
