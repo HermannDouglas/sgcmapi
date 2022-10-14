@@ -39,14 +39,14 @@ public class Seguranca {
 
         http.httpBasic();
         http.cors();
-        http.authorizeHttpRequests().anyRequest().permitAll();
-        // http.authenticationProvider(authProvider());
+        // http.authorizeHttpRequests().anyRequest().permitAll();
+        http.authenticationProvider(authProvider());
         
-        // http.authorizeHttpRequests().antMatchers("/config/**").hasRole("ADMIN");
-        // http.authorizeHttpRequests().anyRequest().authenticated();
+        http.authorizeHttpRequests().antMatchers("/config/**").hasRole("ADMIN");
+        http.authorizeHttpRequests().anyRequest().authenticated();
 
-        // http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
-        // http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.OK));
+        http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
+        http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.OK));
 
         http.csrf().disable();
 
